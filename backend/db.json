@@ -128,6 +128,144 @@
           ]
         }
       }
+    },
+    {
+      "id": 2,
+      "title": "The Enchanted Forest",
+      "author": "Fantasy Writer",
+      "genre": "Fantasy",
+      "description": "A magical journey where your choices determine your destiny.",
+      "isUserCreated": false,
+      "scenes": {
+        "start": {
+          "id": "start",
+          "title": "The Forest Entrance",
+          "text": "You stand at the edge of an ancient forest. Two paths stretch before you - one bright and welcoming, the other dark and mysterious. What do you choose?",
+          "choices": [
+            {
+              "text": "Take the bright path",
+              "nextScene": "bright_path",
+              "consequence": "You chose safety and light"
+            },
+            {
+              "text": "Take the dark path",
+              "nextScene": "dark_path",
+              "consequence": "You chose mystery and danger"
+            }
+          ]
+        },
+        "bright_path": {
+          "id": "bright_path",
+          "title": "The Sunlit Trail",
+          "text": "The bright path leads you through a beautiful meadow. You find a cottage where an old woman offers you tea and wisdom.",
+          "choices": [
+            {
+              "text": "Accept her guidance",
+              "nextScene": "treasure_ending",
+              "consequence": "You chose to trust"
+            },
+            {
+              "text": "Continue exploring",
+              "nextScene": "explorer_ending",
+              "consequence": "You chose adventure"
+            }
+          ]
+        },
+        "dark_path": {
+          "id": "dark_path",
+          "title": "The Shadow Trail",
+          "text": "The dark path leads you to a clearing where three glowing orbs float in the air. Each orb hums with magical energy.",
+          "choices": [
+            {
+              "text": "Touch the blue orb",
+              "nextScene": "ice_ending",
+              "consequence": "You chose ice magic"
+            },
+            {
+              "text": "Touch the green orb",
+              "nextScene": "nature_ending",
+              "consequence": "You chose nature magic"
+            }
+          ]
+        },
+        "treasure_ending": {
+          "id": "treasure_ending",
+          "title": "The Dragon's Treasure",
+          "text": "You find the dragon's cave and answer his riddle correctly. He gifts you a magical book of wisdom. You return home as a scholar and teacher.",
+          "choices": [
+            {
+              "text": "Start a new adventure",
+              "nextScene": "start",
+              "consequence": "Begin again"
+            },
+            {
+              "text": "Return to the library",
+              "nextScene": "library",
+              "consequence": "Explore other stories"
+            }
+          ]
+        },
+        "explorer_ending": {
+          "id": "explorer_ending",
+          "title": "The Wanderer's Path",
+          "text": "You become a wanderer who helps lost travelers and protects the forest's secrets. Your life is one of constant discovery.",
+          "choices": [
+            {
+              "text": "Start a new adventure",
+              "nextScene": "start",
+              "consequence": "Begin a new journey"
+            },
+            {
+              "text": "Return to the library",
+              "nextScene": "library",
+              "consequence": "Explore other stories"
+            }
+          ]
+        },
+        "ice_ending": {
+          "id": "ice_ending",
+          "title": "Master of Ice",
+          "text": "You become the Ice Mage, helping farmers and bringing wonder to children with magical ice shows.",
+          "choices": [
+            {
+              "text": "Start a new adventure",
+              "nextScene": "start",
+              "consequence": "Begin with magical powers"
+            },
+            {
+              "text": "Return to the library",
+              "nextScene": "library",
+              "consequence": "Explore other stories"
+            }
+          ]
+        },
+        "nature_ending": {
+          "id": "nature_ending",
+          "title": "Guardian of Growth",
+          "text": "You become a Nature Mage, healing damaged forests and teaching harmony with nature.",
+          "choices": [
+            {
+              "text": "Start a new adventure",
+              "nextScene": "start",
+              "consequence": "Begin with nature's blessing"
+            },
+            {
+              "text": "Return to the library",
+              "nextScene": "library",
+              "consequence": "Explore other stories"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "e075a4d5-fb64-4ca7-99f9-0b8c53e141e8",
+      "title": "Test 1",
+      "author": "Kay",
+      "description": "Test Description",
+      "genre": "Fantasy",
+      "isUserCreated": "true",
+      "scenes": {}
     }
   ]
 }

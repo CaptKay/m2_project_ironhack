@@ -1,12 +1,10 @@
-import AddStory from "../components/AddStory"
+import AddStory from "../components/AddStory";
 
 const AddStoryPage = () => {
   return (
-   <>
-    <div>AddStoryPage</div>
-    <AddStory />
+    <>
+      <AddStory />
     </>
-    
-  )
-}
-export default AddStoryPage
+  );
+};
+export default AddStoryPage;
