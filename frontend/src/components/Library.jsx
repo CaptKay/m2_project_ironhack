@@ -3,9 +3,10 @@
 
 import { useContext } from "react";
 import { StoryContext } from "../context/StoryContext";
+import {Link, Links} from "react-router-dom"
 
 const Library = () => {
-  const {stories} = useContext(StoryContext)
+  const {stories, deleteStory} = useContext(StoryContext)
   // const [books, setBooks] = useState([]);
 
   // useEffect(() => {
@@ -29,6 +30,10 @@ const Library = () => {
         <em>{Story.genre}</em><br />
         <p>{Story.description
           }</p>
+          <Link to={`/stories/${Story.id}`}>
+          <button>Read</button>
+          </Link>
+           <button onClick={()=>deleteStory(Story.id)}>Delete</button>
       </li>
     ))}
   </ul>)}
