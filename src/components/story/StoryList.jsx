@@ -3,27 +3,37 @@ import { BookOpen } from "lucide-react";
 
 export default function StoryList({ stories }) {
   return (
-    <ul>
+    <div className="story-list">
       {stories.map(story => (
-        <li key={story.id} className="story-card">
+        <div key={story.id} className="story-card">
           {story.coverImage && (
-            <img src={story.coverImage} alt={`${story.title} cover`} style={{ width: "170px" }} />
+            <img
+              src={story.coverImage}
+              alt={`${story.title} cover`}
+              // let CSS control sizes: no inline style needed
+            />
           )}
-          <h2><BookOpen size={24} style={{marginBottom:-5, marginRight:6}} />{story.title}</h2>
-          {story.genres && story.genres.map(g => (
-            <span key={g} className="genre-label">{g}</span>
-          ))}
-          {/* <div>
-            <span style={{ float: "right" }}>
-              <small>[{story.status}]</small>
-            </span>
-          </div> */}
-          <p><i>{story.description}</i></p>
-          <p>
-            <Link to={`/story/${story.id}`}>Read story &rarr;</Link>
-          </p>
-        </li>
+          <div className="story-card-content">
+            <h2 className="story-card-title">
+              <BookOpen size={22} style={{ marginBottom: -4, marginRight: 6 }} />
+              {story.title}
+            </h2>
+            <div className="genres">
+              {story.genres && story.genres.map(g => (
+                <span key={g} className="genre">{g}</span>
+              ))}
+            </div>
+            <p className="story-card-desc">
+              <i>{story.description}</i>
+            </p>
+            <div className="story-card-footer">
+              <Link to={`/story/${story.id}`} className="story-link">
+                Read story &rarr;
+              </Link>
+            </div>
+          </div>
+        </div>
       ))}
-    </ul>
+    </div>
   );
 }
