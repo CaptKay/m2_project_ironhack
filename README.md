@@ -1,5 +1,3 @@
-Certainly! Here’s your README content, properly formatted as **README.md**.  
-Just copy and paste this text into a file named **README.md** in the root of your project.
 
 ```markdown
 # 📚 Mystic Stories App
